@@ -26,7 +26,8 @@
   ignore_errors: true
   register: docker_storage
 
-- debug: Warning operator if Docker storage failed to install
+- name: Warning operator if Docker storage failed to install
+  debug:
     msg: "WARNING: Docker storage could not be configured - Using default option, which has reduced performance!"
   when: docker_storage.rc != 0
 
