@@ -1,0 +1,6 @@
+---
+docker_version: 1.12.6
+repos_to_enable:
+  - rhel-7-server-rpms
+  - rhel-7-server-extras-rpms
+...
