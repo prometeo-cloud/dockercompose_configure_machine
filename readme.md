@@ -30,7 +30,6 @@ The following is a list of default variables used by this role.
 | Variable  | Description  | Value  |
 |---|---|---|
 | **docker_device** | Device name for docker storage | /dev/sdb |
-| **docker_compose_version** | The version of Docker Compose to be installed to manage the lifecycle of the Nexus Docker container. | 1.17.1 |
 
 ### Variables
 | Variable  | Description  |

@@ -43,25 +43,9 @@
     state: present
     disable_gpg_check: yes
 
-- name: Checking if Docker-Py is installed
+- command: pip install --upgrade pip
+
+- name: Installing Docker Compose
   pip:
-    name: docker-py
-
-- name: Checking Which is installed
-  yum:
-    name: "which"
-    state: "present"
-
-- name: Checking if Docker Compose is installed
-  command: which docker-compose
-  failed_when: false
-  changed_when: false
-  register: result
-
-- name: Installing Docker Compose if not present
-  get_url:
-    url: "https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-{{ ansible_system }}-{{ ansible_architecture }}"
-    dest: "/usr/local/bin/docker-compose"
-    mode: "0644"
-  when: result.rc != 0
+    name: docker-compose
 ...

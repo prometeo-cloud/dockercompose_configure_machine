@@ -1,5 +1,4 @@
 ---
 docker_device: vdb
-docker_compose_version: "1.17.1"
 ansible_become: true
 ...
